@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-parallax-tilt";  // Changed from react-tilt to react-parallax-tilt
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -96,3 +96,4 @@ const Projects = () => {
 };
 
 export default SectionWrapper(Projects, "projects");
+
