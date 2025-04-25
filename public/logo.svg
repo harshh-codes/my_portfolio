@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="308.7612359841165"
+   height="304.915625"
+   viewBox="0 0 106.00782394174519 104.68749999999999"
+   class="css-1j8o68f"
+   version="1.1"
+   id="svg23"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs id="SvgjsDefs2684" />
+  <g
+     id="SvgjsG2685"
+     featurekey="rootContainer"
+     transform="matrix(0.9820592540669653,0,0,0.9820592540669653,-0.054560523427421584,0)"
+     fill="#915EFF">
+    <path d="M50 100A50 50 0 1 1 50 0a50 50 0 0 1 0 100zM25 25v50h10V55h30v20h10V25H65v20H35V25H25z" />
+  </g>
+</svg>
