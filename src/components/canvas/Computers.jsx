@@ -4,10 +4,16 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("/desktop_pc/scene-draco.glb", true); // Changed to draco version
+  const computer = useGLTF("/desktop_pc/scene-draco.glb", true);
+
+  // Add error handling to help debug
+  useEffect(() => {
+    if (!computer || !computer.scene) {
+      console.error("Failed to load computer model:", computer);
+    }
+  }, [computer]);
 
   if (!computer || !computer.scene) {
-    console.error("Failed to load computer model");
     return null;
   }
 
@@ -71,7 +77,7 @@ const ComputersCanvas = () => {
   );
 };
 
-// Update the preload to use the draco version
+// Make sure preload uses the same path
 useGLTF.preload("/desktop_pc/scene-draco.glb", true);
 
 export default ComputersCanvas;

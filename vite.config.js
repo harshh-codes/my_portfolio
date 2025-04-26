@@ -10,7 +10,17 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 1600,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
   },
+  assetsInclude: ['**/*.glb', '**/*.gltf'],
   optimizeDeps: {
     include: ['react', 'react-dom']
   }

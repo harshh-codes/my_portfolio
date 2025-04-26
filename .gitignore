@@ -8,5 +8,6 @@
 .env
 .env.local
 
-# But keep the 3D models!
+# Explicitly include 3D models
 !/public/desktop_pc/
+!/public/desktop_pc/scene-draco.glb
