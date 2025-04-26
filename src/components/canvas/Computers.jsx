@@ -1,13 +1,11 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("/desktop_pc/scene.gltf");
+  const computer = useGLTF("/desktop_pc/scene-draco.glb", true); // Changed to draco version
 
-  // Add error handling for model loading
   if (!computer || !computer.scene) {
     console.error("Failed to load computer model");
     return null;
@@ -73,7 +71,7 @@ const ComputersCanvas = () => {
   );
 };
 
-// Preload the model to prevent geometry issues
-useGLTF.preload("/desktop_pc/scene.gltf");
+// Update the preload to use the draco version
+useGLTF.preload("/desktop_pc/scene-draco.glb", true);
 
 export default ComputersCanvas;
